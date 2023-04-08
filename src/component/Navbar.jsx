@@ -26,7 +26,7 @@ useEffect(()=>{
     window.addEventListener('scroll', handleShadow)
 },[])
   return (
-    <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]  bg-[#0B0961]': 'fixed w-full h-20 z-[100] bg-[#08AEEA] '}>
+    <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]  bg-[#08AEEA]': 'fixed w-full h-20 z-[100] bg-[#08AEEA] '}>
         <div className='flex justify-between items-center w-full h-full px-10 2xl:px-16 '>
         {/* <NavLink to="/" > */}
             {/* <img src=
