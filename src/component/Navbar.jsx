@@ -5,7 +5,7 @@ import {GrLanguage} from 'react-icons/gr'
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
 
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import logo from '../assets/logo.png'
 
 function Navbar(props) {
@@ -13,7 +13,7 @@ function Navbar(props) {
     const [shadow, setShadow] = useState(false)
     
 
-    // const {t} = useTranslation(["navbar"]);
+  
 
     const {i18n, t} = useTranslation(["navbar"]);
 
@@ -58,12 +58,7 @@ const [showPopup, setShowPopup] = useState(false);
     <>
 
 <div className="relative ">
-      {/* <button 
-        onClick={handleTogglePopup}
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Login
-      </button> */}
+      
       {showPopup && (
         
         <div className="absolute z-10 top-20 h-[33rem]  w-[30rem] bg-white rounded-lg p-4 right-[20rem] shadow-2xl">
@@ -109,7 +104,7 @@ const [showPopup, setShowPopup] = useState(false);
     
     <div className={shadow ? 'fixed w-full h-20 shadow-xl z-[100]  bg-[#08AEEA]': 'fixed w-full h-20 z-[100] bg-[#08AEEA] '}>
         <div className='flex justify-between items-center w-full h-full px-10 2xl:px-16 '>
-        {/* <NavLink to="/" > */}
+        <NavLink to="/" >
             {/* <img src=
             {logo}
             alt="/" 
@@ -117,8 +112,8 @@ const [showPopup, setShowPopup] = useState(false);
             height='70'
             
             /> */}
-            <h1>{t("Logo")}</h1>
-            {/* </NavLink> */}
+            <h1 className='cursor-pointer'>{t("Logo")}</h1>
+            </NavLink>
         
          
           <div>
@@ -126,9 +121,9 @@ const [showPopup, setShowPopup] = useState(false);
                    {/* <NavLink  to='/' > */}
                     <li className='ml-10 text-sm uppercase cursor-pointer hover:bg-[#54bfe6] hover:rounded text-white p-4 font-bold 'onClick={handleTogglePopup} >{t("login")}</li>
                     {/* </NavLink> */}
-                    {/* <NavLink  to='/' > */}
+                    <NavLink  to='/signup' >
                     <li className='ml-10 text-sm uppercase cursor-pointer  text-white p-4 font-bold hover:bg-[#54bfe6] hover:rounded '>{t("signup")}</li>
-                    {/* </NavLink> */}
+                    </NavLink>
 
                     {/* <NavLink  to='/' > */}
                     <li className='ml-10 p-4 flex '>
