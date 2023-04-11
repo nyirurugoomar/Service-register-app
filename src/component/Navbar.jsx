@@ -93,7 +93,11 @@ const [showPopup, setShowPopup] = useState(false);
               </div>
               <div className='text-center mt-4'>
                 <button className='bg-[#08AEEA] p-4 w-[20rem] rounded-xl text-xl text-white '>Login</button>
-                <h1 className='mt-2 font-semibold'>Don't have an account?<span className='text-[#08AEEA]'>Create one</span></h1>
+                <h1 className='mt-2 font-semibold'>Don't have an account?
+                <NavLink  to='signup'>
+                  <span className='text-[#08AEEA]'>Create one</span>
+                </NavLink>
+                </h1>
               </div>
             </form>
           </div>
