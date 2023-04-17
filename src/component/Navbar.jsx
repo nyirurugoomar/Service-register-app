@@ -125,7 +125,10 @@ const [showPopup, setShowPopup] = useState(false);
                           <li className='ml-10 text-sm uppercase cursor-pointer  text-white p-4 font-bold hover:bg-[#54bfe6] hover:rounded '>{t("signup")}</li>
                      </a>
                     {/* </NavLink> */}
-                    
+                     
+                    <a href="/checkin">
+                          <li className='ml-10 text-sm uppercase cursor-pointer  text-white p-4 font-bold hover:bg-[#54bfe6] hover:rounded '>CheckIN</li>
+                     </a>
 
                     {/* <NavLink  to='/' > */}
                     <li className='ml-10 p-4 flex '>

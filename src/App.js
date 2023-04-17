@@ -13,6 +13,7 @@ import AuthNavbar from './component/Pages/Auth/AuthNavbar';
 
 
 
+
 function App() {
   return (
     <>
@@ -27,6 +28,8 @@ function App() {
           <Route path='/accountVerification' component={AccountVerification}/>
           <Route path='/setPassword' component={SetPassword}/>
           <Route path='/auth/authNavbar' component={AuthNavbar}/>
+  
+          
           
           
 
