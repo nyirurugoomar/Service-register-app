@@ -88,7 +88,7 @@ function Signup () {
                         <label htmlFor='idnumber' className='uppercase text-sm py-2 font-bold '>ID Number</label>
                         <input
                           className='border-2 rounded-lg p-3 flex border-gray-300'
-                          type="idnumber"
+                          type="number"
                           id="idnumber"
                           name="idnumber"
                           placeholder='ID Number'

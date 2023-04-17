@@ -1,7 +1,23 @@
-import React from 'react'
-import { NavLink } from "react-router-dom";
+import React,{useState} from 'react'
+import { useHistory } from 'react-router-dom';
 
 function AccountVerification() {
+  const [verification, setVerification] = useState('');
+  
+  const history = useHistory();
+
+  const handleVerificationChange = (event) =>{
+    setVerification(event.target.value)
+  };
+
+  const handleNext = (event) =>{
+    event.preventDefault();
+    console.log(`varification: ${verification}`)
+    //Navigation to the next page here
+    history.push('/SetPassword')
+  };
+
+  const isNextDisabled = !(verification);
   return (
     <>
     <div  className='w-full lg:h-screen pt-20'>
@@ -55,31 +71,30 @@ function AccountVerification() {
             <div className='p-4 mx-20'>
 
               <h1 className='text-center font-bold'>New Account Setup</h1>
-                <form
-                  action=""
-                   
+                <form onSubmit={handleNext}>
+                    <div className='grid md:grid-cols-1 gap-4 w-full py-2'>
+                    
+                      
+                      <div className='flex flex-col'>
+                        <label htmlFor='verification' className='uppercase text-sm py-2 font-bold'>
+                        Verification
+                        </label>
+                        <input
+                          className='border-2 rounded-lg p-3 flex border-gray-300'
+                          type='number'
+                          id='verification'
+                          name='verification'
+                          placeholder='Enter the number'
+                          value={verification}
+                          onChange={handleVerificationChange}
+                        />
+                      </div>
+                    </div>
+
+                        <button disabled = {isNextDisabled} type="submit" className='w-40   p-4 text-gray-100 mt-4 bg-[#5651e5]'>
+                        Next
+                        </button>
                   
-                >
-                <div className='grid md:grid-cols-1 gap-4 w-full py-2'>
-                
-                  
-                  <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2 font-bold'>
-                    Verification
-                    </label>
-                    <input
-                      className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='number'
-                      name='phone'
-                      placeholder='Enter the number'
-                    />
-                  </div>
-                </div>
-                <NavLink  to='/setPassword'>
-                    <button type="submit" className='w-40   p-4 text-gray-100 mt-4 bg-[#5651e5]'>
-                    Next
-                    </button>
-                </NavLink>
                 </form>
             </div>
           </div>
