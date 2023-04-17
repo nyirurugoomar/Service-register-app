@@ -1,6 +1,27 @@
-import React from 'react'
+import React,{useState} from 'react'
+import { useHistory } from 'react-router-dom';
 
 function SetPassword() {
+  const [password, setPassword] = useState('');
+  const [passwordConfirm, setPasswordConfirm] = useState('')
+
+  const history = useHistory();
+  
+  const handlePasswordChange = (event) =>{
+    setPassword(event.target.value)
+  };
+
+  const handleConfirmPasswordChange = (event) =>{
+    setPasswordConfirm(event.target.value)
+  };
+
+  const handleSubmit = (event) =>{
+    event.preventDefault();
+    console.log(`Password: ${password}, ConfirmPassword: ${passwordConfirm}`)
+    //navigation to nextpage
+    history.push('/Dashboard')
+  };
+  const isSubmitDisabled = !(password && passwordConfirm)
   return (
     <>
       <div  className='w-full lg:h-screen pt-20'>
@@ -54,35 +75,39 @@ function SetPassword() {
             <div className='p-4 mx-20'>
 
               <h1 className='text-center font-bold'>New Account Setup</h1>
-                <form
-                  action=""
-                   
-                  
-                >
+                <form onSubmit={handleSubmit}>
                 <div className='grid md:grid-cols-1 gap-4 w-full py-2'>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2 font-bold '>Password</label>
+                    <label htmlFor='password' className='uppercase text-sm py-2 font-bold '>Password</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
                       type='number'
-                      name='id number'
+                      id='password'
+                      name='password'
                       placeholder='Enter your password'
+                      value = {password}
+                      onChange = {handlePasswordChange}
+
                     />
                   </div>
                   <div className='flex flex-col'>
-                    <label className='uppercase text-sm py-2 font-bold'>
+                    <label htmlFor='confirmPassword' className='uppercase text-sm py-2 font-bold'>
                     Confirm Password
                     </label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='number'
-                      name='phone'
+                      type='text'
+                      id='confirmPassword'
+                      name='confirmPassword'
                       placeholder='Corfirm Password'
+                      value={passwordConfirm}
+                      onChange = {handleConfirmPasswordChange}
+
                     />
                   </div>
                 </div>
 
-                <button type="submit" className='w-40   p-4 text-gray-100 mt-4 bg-[#5651e5]'>
+                <button disabled = {isSubmitDisabled} type="submit" className='w-40   p-4 text-gray-100 mt-4 bg-[#5651e5]'>
                   Submit
                 </button>
                 </form>
