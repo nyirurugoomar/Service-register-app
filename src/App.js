@@ -8,11 +8,7 @@ import Signup from './component/Pages/Signup';
 import AccountVerification from './component/Pages/AccountVerification';
 import SetPassword from './component/Pages/SetPassword';
 import AuthNavbar from './component/Pages/Auth/AuthNavbar';
-
-
-
-
-
+import NotFound404 from './component/Pages/NotFound404';
 
 function App() {
   return (
@@ -21,24 +17,17 @@ function App() {
 {/* <Navbar/> */}
 <Suspense fallback={null}>
          {window.location.pathname.startsWith('/auth') ? <AuthNavbar/> : <Navbar/>}
+         
           <Switch>  
           <Route exact path='/' component={Home}/>
           <Route path='/home' component={Home}/>
           <Route path='/auth/signup' component={Signup}/>
           <Route path='/accountVerification' component={AccountVerification}/>
-          <Route path='/setPassword' component={SetPassword}/>
-          <Route path='/auth/authNavbar' component={AuthNavbar}/>
-  
-          
-          
-          
-
-
-          {/* <Route path="/Auth/dashboard" component={DashboardPage} />
-          <Route path="/Auth/users" component={UsersPage} />
-          <Route path="/Auth/products" component={AdminProductsPage} />
-          <Route path="/Auth/settings" component={SettingsPage} /> */}
+             <Route path='/setPassword' component={SetPassword}/>
+          <Route path='/auth/authNavbar' component={AuthNavbar}/>  
           </Switch>
+          <Route path="*" component={NotFound404} />
+
         <Footer/>
     </Suspense>
 </Router>

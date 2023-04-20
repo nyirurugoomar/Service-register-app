@@ -81,7 +81,7 @@ function SetPassword() {
                     <label htmlFor='password' className='uppercase text-sm py-2 font-bold '>Password</label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='number'
+                      type='password'
                       id='password'
                       name='password'
                       placeholder='Enter your password'
@@ -96,7 +96,7 @@ function SetPassword() {
                     </label>
                     <input
                       className='border-2 rounded-lg p-3 flex border-gray-300'
-                      type='text'
+                      type='password'
                       id='confirmPassword'
                       name='confirmPassword'
                       placeholder='Corfirm Password'
