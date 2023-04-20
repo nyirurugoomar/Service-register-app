@@ -11,35 +11,37 @@ function OurService() {
         </div>
         <div className=''>
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-4 mt-10 mx-10'>
+            <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA] text-center p-2 text-black hover:text-white'>Accreditation for Foreign Media
+                  </div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA] text-center p-2 text-black hover:text-white'>Accreditation for Foreign Media
-</div>
+                  </div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 hover:text-white'>Criminal Record Certificate
-</div>
+                  </div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 hover:text-white'>Transport License
-</div>
+                  </div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Transport Authorization</div>
             </div>
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-10'>
+            {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-10'>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA] text-center p-2 text-black hover:text-white'>
-Community Based Health Insurance(Mutuelle)</div>
+                  Community Based Health Insurance(Mutuelle)</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Various Notary Services</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Publish in the Official Gazette</div>  
-            </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 mt-4 mx-10'>
+            </div> */}
+            {/* <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 mt-4 mx-10'>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA] text-center p-2 text-black hover:text-white'>Purchase an Official Gazette</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Driving License Exam Results</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Application for Driving License</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Sporadic Registration</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Application for National ID</div>  
-            </div>
+            </div> */}
 
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-10'>
+            {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 mx-10'>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA] text-center p-2 text-black hover:text-white'>Certificate of Nationality</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Certificate of Being Alive</div>
                 <div className='rounded-3xl border-[1px] cursor-pointer  border-[#dadada] hover:bg-[#08AEEA]  text-center p-2 text-black hover:text-white'>Certificate of Full Identity</div>
                 
-            </div>
+            </div> */}
         </div>
         
     </div>
@@ -48,3 +50,8 @@ Community Based Health Insurance(Mutuelle)</div>
 }
 
 export default OurService
+
+
+
+
+

@@ -17,16 +17,16 @@ function App() {
 {/* <Navbar/> */}
 <Suspense fallback={null}>
          {window.location.pathname.startsWith('/auth') ? <AuthNavbar/> : <Navbar/>}
-         
           <Switch>  
           <Route exact path='/' component={Home}/>
           <Route path='/home' component={Home}/>
           <Route path='/auth/signup' component={Signup}/>
           <Route path='/accountVerification' component={AccountVerification}/>
-             <Route path='/setPassword' component={SetPassword}/>
+          <Route path='/setPassword' component={SetPassword}/>
           <Route path='/auth/authNavbar' component={AuthNavbar}/>  
-          </Switch>
           <Route path="*" component={NotFound404} />
+          </Switch>
+
 
         <Footer/>
     </Suspense>
